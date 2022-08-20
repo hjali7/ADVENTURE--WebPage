@@ -32,6 +32,12 @@ html{
     color: var(--red-light);
     background: var(--light-color);
 }
+nav ul .fa{
+    display: none;
+}
+nav .fa{
+    display: none;
+}
 
 header{
     background: url(img/header-bg.png);
@@ -91,8 +97,59 @@ header{
 
 .nav-bar ul li a:hover{
     color: var(--red-light);
+    
 }
 
 .nav-bar h2{
     color: var(--light-color);
+}
+
+
+
+
+
+/* media */
+
+@media(max-width:850px){
+    .nav-bar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-bar ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        text-align: center;
+        right: 0;top: -110%;
+        position: fixed;
+        background: rgba(139, 137, 137);
+        height: 100vh;
+        z-index: 3;
+        border-bottom-left-radius: 6rem;
+        transition: .5s linear;
+    }
+    nav ul .fa-close{
+        display: block;
+        font-size: 1.5rem;
+        color: var(--light-color);
+        display: inline-block;
+        position: absolute;
+        top: 0;right: 10px;
+        padding:2rem;
+    }
+    nav .fa-bars{
+        display: inline-block;
+        position: absolute;
+        top: 0;right: 10px;
+        padding:2rem;
+        color: var(--light-color);
+        z-index: 1;
+        font-size: 1.5rem;
+    }
 }

@@ -6,21 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADVENTURE</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
+    <!-- header section start -->
+    
     <nav class="nav-bar">
 
         <h2 class="logo">ADVENTURE</h2>
-
+       
         <ul>
+            <i class="fa fa-close"onclick="left()"></i>
             <li><a href="#home"> home </a></li>
             <li><a href="#tours"> tour </a></li>
             <li><a href="#explore"> explore </a></li>
             <li><a href="#about"> about</a></li>
             <li><a href="#contact"> contact </a></li>
+            
         </ul>
-
+        <i class="fa fa-bars" onclick="right()"></i>
     </nav>
     
     <header>
@@ -34,7 +38,18 @@
         </div>
 
     </header>
+    <!-- header section end -->
 
-    
+    <script>
+        let menu = document.querySelector('i')
+        let navBar = document.querySelector('.nav-bar ul')
+        function right () {
+            navBar.style.top = '0'
+        };
+        function left () {
+            navBar.style.top = '-110%'
+        }
+
+    </script>
 </body>
 </html>
